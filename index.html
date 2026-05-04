@@ -3,122 +3,206 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NFNF Esports</title>
 
-<title>NFNF</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
 
 <style>
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: radial-gradient(circle at top, #1a1a2e, #0f0f0f);
-    color: white;
-    text-align: center;
-  }
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #050505;
+  color: white;
+  overflow-x: hidden;
+}
 
-  .container {
-    padding: 60px 20px;
-  }
+/* NAVBAR */
+header {
+  position: fixed;
+  width: 100%;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
 
-  .logo {
-    width: 160px;
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(255,255,255,0.1);
-  }
+header h1 {
+  letter-spacing: 2px;
+}
 
-  h1 {
-    font-size: 42px;
-    margin: 20px 0 10px;
-    letter-spacing: 2px;
-  }
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  opacity: 0.7;
+  transition: 0.3s;
+}
 
-  p {
-    opacity: 0.75;
-    margin-bottom: 30px;
-  }
+nav a:hover {
+  opacity: 1;
+}
 
-  .buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 20px;
-  }
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #0a0a0a, #000);
+}
 
-  a.button {
-    padding: 12px 18px;
-    border-radius: 12px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: transform 0.2s ease;
-  }
+.hero h2 {
+  font-size: 70px;
+  text-shadow: 0 0 20px #00ffcc;
+}
 
-  a.button:hover {
-    transform: scale(1.05);
-  }
+.hero p {
+  opacity: 0.7;
+}
 
-  .spotify { background: #1DB954; }
-  .tiktok { background: #000000; border: 1px solid #333; }
-  .youtube { background: #FF0000; }
-  .instagram { background: #E1306C; }
-  .discord { background: #5865F2; }
-  .cloud { background: #00AEEF; }
+/* BUTTONS */
+.btn {
+  padding: 12px 25px;
+  margin: 10px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
 
-  footer {
-    margin-top: 50px;
-    font-size: 12px;
-    opacity: 0.4;
-  }
+.primary {
+  background: #00ffcc;
+  color: black;
+  box-shadow: 0 0 20px #00ffcc;
+}
+
+.secondary {
+  border: 1px solid #00ffcc;
+  color: #00ffcc;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: #0f0f0f;
+  margin: 15px;
+  padding: 25px;
+  border-radius: 15px;
+  width: 250px;
+  transition: 0.3s;
+  border: 1px solid #00ffcc20;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px #00ffcc50;
+}
+
+/* EMBEDS */
+.embed {
+  margin-top: 30px;
+}
+
+iframe {
+  border-radius: 15px;
+  max-width: 100%;
+}
+
+/* FOOTER */
+footer {
+  padding: 20px;
+  text-align: center;
+  opacity: 0.5;
+}
 </style>
-
 </head>
 
 <body>
 
-<div class="container">
-
-  <!-- LOGO -->
-  <img class="logo" src="logo.png" alt="NFNF Logo">
-
-  <!-- TITLE -->
+<header>
   <h1>NFNF</h1>
-  <p>Música • Esports • Comunidade</p>
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#plataformas">Plataformas</a>
+    <a href="#live">Live</a>
+  </nav>
+</header>
 
-  <!-- BUTTONS -->
-  <div class="buttons">
+<div class="hero">
+  <h2>NaFeNãoFalha</h2>
+  <p>Gaming • Música • Conteúdo</p>
 
-    <a class="button spotify"
-       href="https://open.spotify.com/intl-pt/artist/0Ellt3nCTFrFYBUPgf8rWS"
-       target="_blank">🎵 Spotify</a>
-
-    <a class="button tiktok"
-       href="https://www.tiktok.com/@nfnfes"
-       target="_blank">🎬 TikTok</a>
-
-    <a class="button youtube"
-       href="https://www.youtube.com/@NaFeNaoFalha"
-       target="_blank">▶ YouTube</a>
-
-    <a class="button instagram"
-       href="https://www.instagram.com/nafenaofalha"
-       target="_blank">📸 Instagram</a>
-
-    <a class="button discord"
-       href="https://discord.gg/HTgaJn8BGp"
-       target="_blank">💬 Discord</a>
-
-    <a class="button cloud"
-       href="https://cloud.nfnf.pt"
-       target="_blank">☁ Cloud</a>
-
+  <div>
+    <a href="https://discord.gg/HTgaJn8BGp" class="btn primary">Discord</a>
+    <a href="https://cloud.nfnf.pt" class="btn secondary">Cloud</a>
   </div>
-
-  <!-- FOOTER -->
-  <footer>
-    © NFNF Esports • Powered by Cloudflare + Nextcloud
-  </footer>
-
 </div>
+
+<section id="sobre">
+  <h2>Sobre</h2>
+  <p>NFNF é uma comunidade e projeto criativo focado em esports, música e entretenimento digital.</p>
+</section>
+
+<section id="plataformas">
+  <h2>Plataformas</h2>
+
+  <div class="cards">
+    <div class="card"><a href="https://open.spotify.com/intl-pt/artist/0Ellt3nCTFrFYBUPgf8rWS">Spotify</a></div>
+    <div class="card"><a href="https://www.youtube.com/@NaFeNaoFalha">YouTube</a></div>
+    <div class="card"><a href="https://www.tiktok.com/@nfnfes">TikTok</a></div>
+    <div class="card"><a href="https://www.instagram.com/nafenaofalha">Instagram</a></div>
+    <div class="card"><a href="https://www.twitch.tv/nafenaofalha">Twitch</a></div>
+  </div>
+</section>
+
+<section id="live">
+  <h2>Live Twitch</h2>
+
+  <div class="embed">
+    <iframe
+      src="https://player.twitch.tv/?channel=nafenaofalha&parent=nfnf.pt"
+      height="400"
+      width="700"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+<section>
+  <h2>Música</h2>
+
+  <div class="embed">
+    <iframe style="border-radius:12px"
+      src="https://open.spotify.com/embed/artist/0Ellt3nCTFrFYBUPgf8rWS"
+      width="100%"
+      height="380"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+    </iframe>
+  </div>
+</section>
+
+<footer>
+  © 2026 NFNF — NaFeNãoFalha
+</footer>
 
 </body>
 </html>
