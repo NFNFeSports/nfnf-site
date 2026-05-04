@@ -8,11 +8,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box;}
 
-/* RESET */
-* { margin:0; padding:0; box-sizing:border-box; }
-
-body {
+body{
   font-family:'Orbitron',sans-serif;
   background:#000;
   color:#fff;
@@ -20,29 +18,27 @@ body {
 }
 
 /* LOADER */
-#loader {
-  position:fixed; inset:0;
+#loader{
+  position:fixed;inset:0;
   background:black;
   display:flex;
   justify-content:center;
   align-items:center;
   z-index:9999;
 }
-
-#loader h1 {
+#loader h1{
   color:#00fff7;
   text-shadow:0 0 20px #00fff7;
   animation:pulse 1.2s infinite;
 }
-
-@keyframes pulse {
+@keyframes pulse{
   0%{opacity:1;}
   50%{opacity:0.3;}
   100%{opacity:1;}
 }
 
 /* PARTICLES */
-canvas {
+canvas{
   position:fixed;
   inset:0;
   z-index:0;
@@ -50,12 +46,12 @@ canvas {
 }
 
 /* WRAPPER */
-.wrapper { position:relative; z-index:2; }
+.wrapper{position:relative;z-index:2;}
 
 /* HEADER */
-header {
+header{
   position:fixed;
-  top:0; left:0;
+  top:0;left:0;
   width:100%;
   padding:15px 30px;
   display:flex;
@@ -66,19 +62,17 @@ header {
   z-index:10;
 }
 
-nav { display:flex; gap:18px; }
-
-nav a {
+nav{display:flex;gap:18px;}
+nav a{
   color:#fff;
   text-decoration:none;
   opacity:0.7;
   font-size:14px;
 }
-
-nav a:hover { color:#00fff7; opacity:1; }
+nav a:hover{color:#00fff7;opacity:1;}
 
 /* HERO */
-.hero {
+.hero{
   height:100vh;
   display:flex;
   flex-direction:column;
@@ -86,25 +80,22 @@ nav a:hover { color:#00fff7; opacity:1; }
   align-items:center;
   text-align:center;
 }
-
-.hero h1 {
+.hero h1{
   font-size:clamp(40px,6vw,70px);
   color:#00fff7;
   text-shadow:0 0 25px #00fff7;
 }
-
-.hero p { opacity:0.7; margin-top:10px; }
+.hero p{opacity:0.7;margin-top:10px;}
 
 /* BUTTONS */
-.btn-group {
+.btn-group{
   margin-top:25px;
   display:flex;
   gap:10px;
   flex-wrap:wrap;
   justify-content:center;
 }
-
-.btn {
+.btn{
   padding:12px 22px;
   border:1px solid #00fff7;
   color:#00fff7;
@@ -112,44 +103,41 @@ nav a:hover { color:#00fff7; opacity:1; }
   transition:0.3s;
   font-size:14px;
 }
-
-.btn:hover {
+.btn:hover{
   background:#00fff7;
   color:black;
   box-shadow:0 0 20px #00fff7;
 }
 
 /* SECTIONS */
-section { padding:80px 20px; text-align:center; }
-
-section h2 {
+section{
+  padding:80px 20px;
+  text-align:center;
+}
+section h2{
   color:#00fff7;
   margin-bottom:25px;
 }
 
-/* GRID TEAM */
-.grid {
+/* TEAM */
+.grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
   gap:15px;
   max-width:900px;
   margin:auto;
 }
-
-.card {
+.card{
   border:1px solid #00fff7;
   padding:20px;
   transition:0.3s;
   background:rgba(255,255,255,0.02);
 }
-
-.card:hover {
+.card:hover{
   transform:translateY(-6px);
   box-shadow:0 0 20px #00fff740;
 }
-
-/* PLAYER IMG */
-.card img {
+.card img{
   width:80px;
   height:80px;
   border-radius:50%;
@@ -158,29 +146,37 @@ section h2 {
 }
 
 /* SOCIALS */
-.socials {
+.socials{
   display:flex;
   justify-content:center;
   flex-wrap:wrap;
   gap:10px;
-  margin-top:20px;
 }
-
-.socials a {
+.socials a{
   border:1px solid #00fff7;
   padding:8px 12px;
   font-size:12px;
   color:#00fff7;
   text-decoration:none;
 }
-
-.socials a:hover {
+.socials a:hover{
   background:#00fff7;
   color:black;
 }
 
+/* EMBEDS */
+.embed{
+  max-width:900px;
+  margin:30px auto 0;
+}
+
+.embed iframe{
+  width:100%;
+  border-radius:12px;
+}
+
 /* FOOTER */
-footer {
+footer{
   padding:20px;
   text-align:center;
   opacity:0.4;
@@ -202,13 +198,15 @@ footer {
   <nav>
     <a href="#">Home</a>
     <a href="#team">Equipa</a>
+    <a href="#live">Live</a>
     <a href="#server">Server</a>
   </nav>
 </header>
 
+<!-- HERO -->
 <div class="hero">
   <h1>NaFéNãoFalha</h1>
-  <p>Gaming • Música • Esports</p>
+  <p>NFNF</p>
 
   <div class="btn-group">
     <a class="btn" href="https://discord.com/invite/HTgaJn8BGp" target="_blank">Discord</a>
@@ -219,7 +217,6 @@ footer {
 <!-- TEAM -->
 <section id="team">
 <h2>EQUIPA</h2>
-
 <div class="grid">
 
 <a class="card" href="https://www.twitch.tv/zigazz" target="_blank">
@@ -260,6 +257,34 @@ footer {
 </div>
 </section>
 
+<!-- LIVE TWITCH -->
+<section id="live">
+<h2>LIVE</h2>
+
+<div class="embed">
+<iframe
+src="https://player.twitch.tv/?channel=nafenaofalha&parent=nfnf.pt"
+height="400"
+allowfullscreen>
+</iframe>
+</div>
+
+</section>
+
+<!-- SPOTIFY -->
+<section>
+<h2>MÚSICA</h2>
+
+<div class="embed">
+<iframe
+src="https://open.spotify.com/embed/artist/0Ellt3nCTFrFYBUPgf8rWS"
+height="380"
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+</iframe>
+</div>
+
+</section>
+
 <!-- SOCIALS -->
 <section>
 <h2>PLATAFORMAS</h2>
@@ -271,13 +296,14 @@ footer {
 <a href="https://www.instagram.com/nafenaofalha" target="_blank">Instagram</a>
 <a href="https://www.twitch.tv/nafenaofalha" target="_blank">Twitch</a>
 </div>
+
 </section>
 
 <!-- SERVER -->
 <section id="server">
 <h2>DAYZ SERVER</h2>
 
-<p>Para jogar no servidor, entra pelo acesso direto:</p>
+<p>Para jogar no servidor:</p>
 
 <div class="btn-group">
 <a class="btn" href="https://discord.com/invite/tjKfnmxVuM" target="_blank">Acesso DayZ</a>
@@ -295,44 +321,42 @@ footer {
 <script>
 
 /* LOADER */
-window.onload = () => {
-  setTimeout(()=>{document.getElementById("loader").style.display="none";},1200);
-};
+window.onload=()=>{setTimeout(()=>{loader.style.display="none"},1200)};
 
 /* PARTICLES */
-const canvas = document.getElementById("c");
-const ctx = canvas.getContext("2d");
+const canvas=document.getElementById("c");
+const ctx=canvas.getContext("2d");
 
 function resize(){
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+canvas.width=innerWidth;
+canvas.height=innerHeight;
 }
 resize();
-window.onresize = resize;
+onresize=resize;
 
-let particles = [];
+let particles=[];
 for(let i=0;i<70;i++){
-  particles.push({
-    x:Math.random()*canvas.width,
-    y:Math.random()*canvas.height,
-    dx:(Math.random()-0.5)*0.6,
-    dy:(Math.random()-0.5)*0.6
-  });
+particles.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+dx:(Math.random()-0.5)*0.6,
+dy:(Math.random()-0.5)*0.6
+});
 }
 
 function animate(){
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  ctx.fillStyle="#00fff7";
+ctx.clearRect(0,0,canvas.width,canvas.height);
+ctx.fillStyle="#00fff7";
 
-  particles.forEach(p=>{
-    ctx.fillRect(p.x,p.y,2,2);
-    p.x+=p.dx;
-    p.y+=p.dy;
-    if(p.x<0||p.x>canvas.width)p.dx*=-1;
-    if(p.y<0||p.y>canvas.height)p.dy*=-1;
-  });
+particles.forEach(p=>{
+ctx.fillRect(p.x,p.y,2,2);
+p.x+=p.dx;
+p.y+=p.dy;
+if(p.x<0||p.x>canvas.width)p.dx*=-1;
+if(p.y<0||p.y>canvas.height)p.dy*=-1;
+});
 
-  requestAnimationFrame(animate);
+requestAnimationFrame(animate);
 }
 animate();
 
