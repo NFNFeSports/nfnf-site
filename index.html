@@ -1,62 +1,124 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 <head>
-  <title>NFNF Esports</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial;
-      background: linear-gradient(135deg, #0f0f0f, #1a1a2e);
-      color: white;
-      text-align: center;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    .container {
-      padding: 60px;
-    }
+<title>NFNF</title>
 
-    img {
-      width: 180px;
-      border-radius: 20px;
-      margin-bottom: 20px;
-    }
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top, #1a1a2e, #0f0f0f);
+    color: white;
+    text-align: center;
+  }
 
-    h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
+  .container {
+    padding: 60px 20px;
+  }
 
-    p {
-      opacity: 0.8;
-    }
+  .logo {
+    width: 160px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+  }
 
-    a {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 20px;
-      background: #5865F2;
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
-    }
+  h1 {
+    font-size: 42px;
+    margin: 20px 0 10px;
+    letter-spacing: 2px;
+  }
 
-    a:hover {
-      background: #4752c4;
-    }
-  </style>
+  p {
+    opacity: 0.75;
+    margin-bottom: 30px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  a.button {
+    padding: 12px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+  }
+
+  a.button:hover {
+    transform: scale(1.05);
+  }
+
+  .spotify { background: #1DB954; }
+  .tiktok { background: #000000; border: 1px solid #333; }
+  .youtube { background: #FF0000; }
+  .instagram { background: #E1306C; }
+  .discord { background: #5865F2; }
+  .cloud { background: #00AEEF; }
+
+  footer {
+    margin-top: 50px;
+    font-size: 12px;
+    opacity: 0.4;
+  }
+</style>
+
 </head>
 
 <body>
-  <div class="container">
 
-    <img src="logo.png" alt="NFNF Logo">
+<div class="container">
 
-    <h1>NFNF ESPORTS</h1>
-    <p>Bem-vindo à nossa equipa</p>
+  <!-- LOGO -->
+  <img class="logo" src="logo.png" alt="NFNF Logo">
 
-    <a href="https://discord.gg/HTgaJn8BGp">Discord</a>
-    <a href="https://cloud.nfnf.pt">Cloud</a>
+  <!-- TITLE -->
+  <h1>NFNF</h1>
+  <p>Música • Esports • Comunidade</p>
+
+  <!-- BUTTONS -->
+  <div class="buttons">
+
+    <a class="button spotify"
+       href="https://open.spotify.com/intl-pt/artist/0Ellt3nCTFrFYBUPgf8rWS"
+       target="_blank">🎵 Spotify</a>
+
+    <a class="button tiktok"
+       href="https://www.tiktok.com/@nfnfes"
+       target="_blank">🎬 TikTok</a>
+
+    <a class="button youtube"
+       href="https://www.youtube.com/@NaFeNaoFalha"
+       target="_blank">▶ YouTube</a>
+
+    <a class="button instagram"
+       href="https://www.instagram.com/nafenaofalha"
+       target="_blank">📸 Instagram</a>
+
+    <a class="button discord"
+       href="https://discord.gg/HTgaJn8BGp"
+       target="_blank">💬 Discord</a>
+
+    <a class="button cloud"
+       href="https://cloud.nfnf.pt"
+       target="_blank">☁ Cloud</a>
 
   </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © NFNF Esports • Powered by Cloudflare + Nextcloud
+  </footer>
+
+</div>
+
 </body>
 </html>
