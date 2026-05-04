@@ -1,268 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NFNF Esports</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/6b7c2e4a6a.js" crossorigin="anonymous"></script>
-
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #050505;
-  color: white;
-  overflow-x: hidden;
-}
-
-/* NAV */
-header {
-  position: fixed;
-  width: 100%;
-  padding: 12px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(0,0,0,0.7);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-}
-
-header h1 {
-  font-size: 18px;
-  letter-spacing: 2px;
-}
-
-nav a {
-  margin-left: 15px;
-  text-decoration: none;
-  color: white;
-  opacity: 0.7;
-  font-size: 14px;
-}
-
-nav a:hover {
-  opacity: 1;
-}
-
-/* HERO */
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  background: radial-gradient(circle at center, #0a0a0a, #000);
-  padding: 20px;
-}
-
-.hero h2 {
-  font-size: clamp(40px, 8vw, 70px);
-  text-shadow: 0 0 20px #00ffcc;
-  margin: 0;
-}
-
-.hero p {
-  opacity: 0.7;
-  margin-bottom: 20px;
-}
-
-/* BUTTONS */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 22px;
-  margin: 8px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
-  font-size: 14px;
-}
-
-.primary {
-  background: #00ffcc;
-  color: black;
-  box-shadow: 0 0 20px #00ffcc;
-}
-
-.secondary {
-  border: 1px solid #00ffcc;
-  color: #00ffcc;
-}
-
-.btn:hover {
-  transform: scale(1.05);
-}
-
-/* SECTIONS */
-section {
-  padding: 70px 20px;
-  text-align: center;
-}
-
-section h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
-}
-
-/* CARDS */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 15px;
-  max-width: 900px;
-  margin: auto;
-}
-
-.card {
-  background: #0f0f0f;
-  padding: 20px;
-  border-radius: 15px;
-  transition: 0.3s;
-  border: 1px solid #00ffcc20;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 20px #00ffcc40;
-}
-
-.card a {
-  color: white;
-  text-decoration: none;
-}
-
-/* EMBEDS */
-.embed {
-  margin-top: 20px;
-}
-
-iframe {
-  border-radius: 15px;
-  max-width: 100%;
-}
-
-/* FOOTER */
-footer {
-  padding: 20px;
-  text-align: center;
-  opacity: 0.5;
-  font-size: 12px;
-}
-
-/* MOBILE FIXES */
-@media (max-width: 600px) {
-  nav a {
-    font-size: 12px;
-    margin-left: 10px;
-  }
-
-  .hero h2 {
-    font-size: 40px;
-  }
-
-  iframe {
-    width: 100%;
-    height: auto;
-  }
-}
-</style>
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/particles.js"></script>
+<script src="assets/js/loader.js"></script>
 </head>
 
 <body>
 
+<div id="loader"><h1>NFNF BOOTING...</h1></div>
+
 <header>
-  <h1>NFNF</h1>
+  <h2>NFNF</h2>
   <nav>
-    <a href="#sobre">Sobre</a>
-    <a href="#plataformas">Plataformas</a>
-    <a href="#dayz">DayZ</a>
-    <a href="#live">Live</a>
+    <a href="index.html">Home</a>
+    <a href="team.html">Equipa</a>
+    <a href="server.html">Server</a>
   </nav>
 </header>
 
-<div class="hero">
-  <h2>NaFéNãoFalha</h2>
-  <p>Gaming • Música • Comunidade</p>
+<div style="text-align:center;margin-top:150px;position:relative;z-index:2;">
+  <h1>NaFéNãoFalha</h1>
 
-  <div>
-    <a href="https://discord.gg/tjKfnmxVuM" class="btn primary">
-      <i class="fab fa-discord"></i> Discord
-    </a>
-
-    <a href="https://cloud.nfnf.pt" class="btn secondary">
-      <i class="fas fa-cloud"></i> Cloud
-    </a>
-  </div>
+  <a class="btn" href="https://discord.gg/tjKfnmxVuM">Discord</a>
+  <a class="btn" href="https://cloud.nfnf.pt">Cloud</a>
 </div>
-
-<section id="sobre">
-  <h2>Sobre</h2>
-  <p>
-    We are a group of friends who love gaming, music and creating content.
-    Join NFNF and be part of the community.
-  </p>
-</section>
-
-<section id="plataformas">
-  <h2>Plataformas</h2>
-
-  <div class="cards">
-    <div class="card"><a href="https://open.spotify.com/intl-pt/artist/0Ellt3nCTFrFYBUPgf8rWS"><i class="fab fa-spotify"></i> Spotify</a></div>
-    <div class="card"><a href="https://www.youtube.com/@NaFeNaoFalha"><i class="fab fa-youtube"></i> YouTube</a></div>
-    <div class="card"><a href="https://www.tiktok.com/@nfnfes"><i class="fab fa-tiktok"></i> TikTok</a></div>
-    <div class="card"><a href="https://www.instagram.com/nafenaofalha"><i class="fab fa-instagram"></i> Instagram</a></div>
-    <div class="card"><a href="https://www.twitch.tv/nafenaofalha"><i class="fab fa-twitch"></i> Twitch</a></div>
-  </div>
-</section>
-
-<section id="dayz">
-  <h2>Servidor DayZ</h2>
-  <p>Entra no Discord para ter acesso ao servidor.</p>
-
-  <a href="https://discord.gg/tjKfnmxVuM" class="btn primary">
-    <i class="fas fa-gamepad"></i> Entrar no Acesso DayZ
-  </a>
-</section>
-
-<section id="live">
-  <h2>Live Twitch</h2>
-
-  <div class="embed">
-    <iframe
-      src="https://player.twitch.tv/?channel=nafenaofalha&parent=nfnf.pt"
-      height="400"
-      width="100%"
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
-
-<section>
-  <h2>Música</h2>
-
-  <div class="embed">
-    <iframe
-      src="https://open.spotify.com/embed/artist/0Ellt3nCTFrFYBUPgf8rWS"
-      width="100%"
-      height="380"
-      allow="autoplay; encrypted-media">
-    </iframe>
-  </div>
-</section>
-
-<footer>
-  © 2026 NFNF — NaFéNãoFalha
-</footer>
 
 </body>
 </html>
