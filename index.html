@@ -10,173 +10,181 @@
 <style>
 
 /* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin:0; padding:0; box-sizing:border-box; }
 
 body {
-  font-family: 'Orbitron', sans-serif;
-  background: #000;
-  color: #fff;
-  overflow-x: hidden;
+  font-family:'Orbitron',sans-serif;
+  background:#000;
+  color:#fff;
+  overflow-x:hidden;
 }
 
 /* LOADER */
 #loader {
-  position: fixed;
-  inset: 0;
-  background: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
+  position:fixed; inset:0;
+  background:black;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
 }
 
 #loader h1 {
-  color: #00fff7;
-  text-shadow: 0 0 20px #00fff7;
-  animation: pulse 1.2s infinite;
+  color:#00fff7;
+  text-shadow:0 0 20px #00fff7;
+  animation:pulse 1.2s infinite;
 }
 
 @keyframes pulse {
-  0% {opacity: 1;}
-  50% {opacity: 0.3;}
-  100% {opacity: 1;}
+  0%{opacity:1;}
+  50%{opacity:0.3;}
+  100%{opacity:1;}
 }
 
-/* PARTICLES LAYER */
+/* PARTICLES */
 canvas {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
 }
 
-/* MAIN LAYER */
-.wrapper {
-  position: relative;
-  z-index: 2;
-}
+/* WRAPPER */
+.wrapper { position:relative; z-index:2; }
 
 /* HEADER */
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(10px);
-  z-index: 10;
+  position:fixed;
+  top:0; left:0;
+  width:100%;
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
+  z-index:10;
 }
 
-nav {
-  display: flex;
-  gap: 18px;
-}
+nav { display:flex; gap:18px; }
 
 nav a {
-  color: #fff;
-  text-decoration: none;
-  opacity: 0.7;
-  font-size: 14px;
+  color:#fff;
+  text-decoration:none;
+  opacity:0.7;
+  font-size:14px;
 }
 
-nav a:hover {
-  opacity: 1;
-  color: #00fff7;
-}
+nav a:hover { color:#00fff7; opacity:1; }
 
 /* HERO */
 .hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
 }
 
 .hero h1 {
-  font-size: clamp(40px, 6vw, 70px);
-  color: #00fff7;
-  text-shadow: 0 0 25px #00fff7;
+  font-size:clamp(40px,6vw,70px);
+  color:#00fff7;
+  text-shadow:0 0 25px #00fff7;
 }
 
-.hero p {
-  margin-top: 10px;
-  opacity: 0.7;
-}
+.hero p { opacity:0.7; margin-top:10px; }
 
 /* BUTTONS */
 .btn-group {
-  margin-top: 25px;
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  justify-content: center;
+  margin-top:25px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  justify-content:center;
 }
 
 .btn {
-  padding: 12px 22px;
-  border: 1px solid #00fff7;
-  color: #00fff7;
-  text-decoration: none;
-  transition: 0.25s;
-  font-size: 14px;
+  padding:12px 22px;
+  border:1px solid #00fff7;
+  color:#00fff7;
+  text-decoration:none;
+  transition:0.3s;
+  font-size:14px;
 }
 
 .btn:hover {
-  background: #00fff7;
-  color: black;
-  box-shadow: 0 0 20px #00fff7;
+  background:#00fff7;
+  color:black;
+  box-shadow:0 0 20px #00fff7;
 }
 
 /* SECTIONS */
-section {
-  padding: 80px 20px;
-  text-align: center;
-}
+section { padding:80px 20px; text-align:center; }
 
 section h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #00fff7;
+  color:#00fff7;
+  margin-bottom:25px;
 }
 
-/* GRID */
+/* GRID TEAM */
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
-  max-width: 900px;
-  margin: auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:15px;
+  max-width:900px;
+  margin:auto;
 }
 
 .card {
-  border: 1px solid #00fff7;
-  padding: 20px;
-  transition: 0.3s;
-  background: rgba(255,255,255,0.02);
+  border:1px solid #00fff7;
+  padding:20px;
+  transition:0.3s;
+  background:rgba(255,255,255,0.02);
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 20px #00fff740;
+  transform:translateY(-6px);
+  box-shadow:0 0 20px #00fff740;
+}
+
+/* PLAYER IMG */
+.card img {
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  margin-bottom:10px;
+  border:2px solid #00fff7;
+}
+
+/* SOCIALS */
+.socials {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:20px;
+}
+
+.socials a {
+  border:1px solid #00fff7;
+  padding:8px 12px;
+  font-size:12px;
+  color:#00fff7;
+  text-decoration:none;
+}
+
+.socials a:hover {
+  background:#00fff7;
+  color:black;
 }
 
 /* FOOTER */
 footer {
-  padding: 20px;
-  text-align: center;
-  opacity: 0.4;
-  font-size: 12px;
+  padding:20px;
+  text-align:center;
+  opacity:0.4;
+  font-size:12px;
 }
 
 </style>
@@ -184,17 +192,11 @@ footer {
 
 <body>
 
-<!-- LOADER -->
-<div id="loader">
-  <h1>NFNF BOOTING...</h1>
-</div>
-
-<!-- PARTICLES -->
+<div id="loader"><h1>NFNF BOOTING...</h1></div>
 <canvas id="c"></canvas>
 
 <div class="wrapper">
 
-<!-- HEADER -->
 <header>
   <div>NFNF</div>
   <nav>
@@ -204,46 +206,88 @@ footer {
   </nav>
 </header>
 
-<!-- HERO -->
 <div class="hero">
   <h1>NaFéNãoFalha</h1>
-  <p>Gaming • Music • Esports Community</p>
+  <p>Gaming • Música • Esports</p>
 
   <div class="btn-group">
-    <a class="btn" href="https://discord.gg/tjKfnmxVuM">Discord</a>
-    <a class="btn" href="https://cloud.nfnf.pt">Cloud</a>
+    <a class="btn" href="https://discord.com/invite/HTgaJn8BGp" target="_blank">Discord</a>
+    <a class="btn" href="https://cloud.nfnf.pt" target="_blank">Cloud</a>
   </div>
 </div>
 
 <!-- TEAM -->
 <section id="team">
-  <h2>EQUIPA</h2>
+<h2>EQUIPA</h2>
 
-  <div class="grid">
-  <div class="card">ZigaZz</div>
-  <div class="card">Afonzi</div>
-  <div class="card">Luso_TugaPT</div>
-  <div class="card">TrollFace4Ever</div>
-  <div class="card">GabzLucas96</div>
-  <div class="card">Tivilanova</div>
-  <div class="card">JcoelhoTTV</div>
-  </div>
+<div class="grid">
+
+<a class="card" href="https://www.twitch.tv/zigazz" target="_blank">
+<img src="https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_70x70.png">
+<div>ZigaZz</div>
+</a>
+
+<a class="card" href="https://www.twitch.tv/agente_chunga" target="_blank">
+<img src="https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_70x70.png">
+<div>Afonzi</div>
+</a>
+
+<a class="card" href="https://www.twitch.tv/lusotuga_pt" target="_blank">
+<img src="https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_70x70.png">
+<div>Luso_TugaPT</div>
+</a>
+
+<a class="card" href="https://www.twitch.tv/trollface4everr" target="_blank">
+<img src="https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_70x70.png">
+<div>TrollFace4Ever</div>
+</a>
+
+<a class="card" href="https://www.twitch.tv/gabzlucas96" target="_blank">
+<img src="https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_70x70.png">
+<div>GabzLucas96</div>
+</a>
+
+<a class="card" href="https://www.twitch.tv/tivilanova" target="_blank">
+<img src="https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_70x70.png">
+<div>Tivilanova</div>
+</a>
+
+<a class="card" href="https://www.twitch.tv/joaocoelhottv" target="_blank">
+<img src="https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_70x70.png">
+<div>JcoelhoTTV</div>
+</a>
+
+</div>
+</section>
+
+<!-- SOCIALS -->
+<section>
+<h2>PLATAFORMAS</h2>
+
+<div class="socials">
+<a href="https://open.spotify.com/intl-pt/artist/0Ellt3nCTFrFYBUPgf8rWS" target="_blank">Spotify</a>
+<a href="https://www.youtube.com/@NaFeNaoFalha" target="_blank">YouTube</a>
+<a href="https://www.tiktok.com/@nfnfes" target="_blank">TikTok</a>
+<a href="https://www.instagram.com/nafenaofalha" target="_blank">Instagram</a>
+<a href="https://www.twitch.tv/nafenaofalha" target="_blank">Twitch</a>
+</div>
 </section>
 
 <!-- SERVER -->
 <section id="server">
-  <h2>DAYZ SERVER</h2>
+<h2>DAYZ SERVER</h2>
 
-  <p>Junta-te ao Discord para acesso ao servidor.</p>
+<p>Para jogar no servidor, entra pelo acesso direto:</p>
 
-  <div class="btn-group">
-    <a class="btn" href="https://discord.gg/tjKfnmxVuM">Entrar no Discord</a>
-  </div>
+<div class="btn-group">
+<a class="btn" href="https://discord.com/invite/tjKfnmxVuM" target="_blank">Acesso DayZ</a>
+<a class="btn" href="https://discord.com/invite/HTgaJn8BGp" target="_blank">Discord Geral</a>
+</div>
+
 </section>
 
-<!-- FOOTER -->
 <footer>
-  © 2026 NFNF — NaFéNãoFalha
+© 2026 NFNF — NaFéNãoFalha
 </footer>
 
 </div>
@@ -252,12 +296,10 @@ footer {
 
 /* LOADER */
 window.onload = () => {
-  setTimeout(() => {
-    document.getElementById("loader").style.display = "none";
-  }, 1200);
+  setTimeout(()=>{document.getElementById("loader").style.display="none";},1200);
 };
 
-/* PARTICLES SAFE (não bloqueia UI) */
+/* PARTICLES */
 const canvas = document.getElementById("c");
 const ctx = canvas.getContext("2d");
 
@@ -269,11 +311,10 @@ resize();
 window.onresize = resize;
 
 let particles = [];
-
 for(let i=0;i<70;i++){
   particles.push({
-    x: Math.random()*canvas.width,
-    y: Math.random()*canvas.height,
+    x:Math.random()*canvas.width,
+    y:Math.random()*canvas.height,
     dx:(Math.random()-0.5)*0.6,
     dy:(Math.random()-0.5)*0.6
   });
@@ -281,22 +322,18 @@ for(let i=0;i<70;i++){
 
 function animate(){
   ctx.clearRect(0,0,canvas.width,canvas.height);
-
-  ctx.fillStyle = "#00fff7";
+  ctx.fillStyle="#00fff7";
 
   particles.forEach(p=>{
     ctx.fillRect(p.x,p.y,2,2);
-
-    p.x += p.dx;
-    p.y += p.dy;
-
-    if(p.x<0||p.x>canvas.width) p.dx*=-1;
-    if(p.y<0||p.y>canvas.height) p.dy*=-1;
+    p.x+=p.dx;
+    p.y+=p.dy;
+    if(p.x<0||p.x>canvas.width)p.dx*=-1;
+    if(p.y<0||p.y>canvas.height)p.dy*=-1;
   });
 
   requestAnimationFrame(animate);
 }
-
 animate();
 
 </script>
